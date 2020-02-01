@@ -1,0 +1,50 @@
+I have implemented the below things when we need to be update for migration from ng4.4 to ng8.
+
+Update all of our angular framework packages, and correct version of RxJS and TypeScript.
+Update Angular material to the latest version (8). ( This will automatically migrate deprecated API’s)
+Update Typescript
+Update Angular CLI
+Update Node to 10
+
+Before Updating to ng8 version:
+
+Rename your template tags to ng-template
+Anywhere you use Renderer, now use Renderer2.
+If you use the legacy HttpModule and the Http service, switch to HttpClientModule and the HttpClient service. HttpClient simplifies the default ergonomics (you don't need to map to JSON anymore) and now supports typed return values and interceptors
+
+Interceptor services updated as per latest need.
+
+main.ts —> use preserveWhitespaces: true
+@angular/cli@1.4.4 to @angular/cli@8.3.6
+
+Node -v  v10.9.0
+
+Ng v - used to see angular CLI
+
+ng update @angular/material --allow-dirty —force
+ng update @angular/core --from 8.0.0 --to 9.0.0 --migrate-only --allow-dirty --force
+
+@ViewChild('foo', {static: true}) foo: ElementRef;
+
+Angular CLI: 8.3.6
+Node: 10.9.0
+OS: darwin x64
+Angular: 9.0.0-next.8
+... animations, common, compiler, compiler-cli, core, forms
+... language-service, platform-browser, platform-browser-dynamic
+... router
+
+Package                      Version
+------------------------------------------------------
+@angular-devkit/architect    0.803.6
+@angular-devkit/core         8.3.6
+@angular-devkit/schematics   8.3.6
+@angular/cdk                 8.2.1
+@angular/cli                 8.3.6
+@angular/http                4.4.4
+@angular/material            8.2.1
+@schematics/angular          8.3.6
+@schematics/update           0.803.6
+rxjs                         6.5.3
+typescript                   3.5.3
+webpack                      4.39.2
