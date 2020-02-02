@@ -1,0 +1,6 @@
+In 4.4 version without Lazy Loading, it loaded all components at the very first time and it took 30 Seconds to render landing page.
+In 8.2 version with Lazy Loading, it loaded only required components for the landing page and it took around 500 MilliSeconds
+
+And differential loading lets us serve up different bundles to different browsers and make our application even faster!  
+It saves on average 7-20% in bundle size for Angular applications in modern browsers.
+
